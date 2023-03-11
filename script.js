@@ -1,5 +1,7 @@
 const gallery = document.getElementById("gallery");
 
+console.log(gallery);
+
 window.onmousemove = e => {
   const mouseX = e.clientX,
         mouseY = e.clientY;
