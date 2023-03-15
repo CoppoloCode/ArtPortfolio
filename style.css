@@ -13,7 +13,7 @@ html::-webkit-scrollbar{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background: rgb(206, 201, 201);
+    background: white;
 }
 
 .header{
@@ -43,110 +43,155 @@ body{
     text-decoration: none;
     color: black;
     font-family: 'Shut Down', sans-serif;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
-#gallery {
-    height: 140vh;
-    width: 140vw;
-    position: absolute;
-    z-index: 1;
-}
 
-.tile {
-    border-radius: 1vmax;
-    position: absolute;
-    box-shadow: 8px 8px 8px;
-    transition: transform 800ms ease;
-   
-}
-  
-.tile:hover {
-    transform: scale(1.1);
-}
-  
-.tile:hover > img { 
-    transform: scale(1.01);
-}
-  
-.tile > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    transition: opacity 800ms ease,
-    transform 800ms ease;
+
+@media only screen and (max-width: 1500px) {
+
+    .header{
+        position: sticky;
+    }
+    .navigation ul li a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Shut Down', sans-serif;
+        font-size: 1.5rem;
+    }
+    
+    #gallery {
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .col {
+        width: 50%;
+    }
+    .tile{
+        padding: 4px;
+        vertical-align: middle;
+       
+    }
+    .tile > img {
+        width: 100%; 
+        border-radius: 1vmax;
+    }
     
 }
 
-.tile:nth-child(1) {
-    background-color: rgb(255, 238, 88);
-    height: 14%;
-    width: 20%;
-    left: 15%;
-    top: 20%;
+@media only screen and (min-width: 1500px) {
+
+   
+    #gallery {
+        height: 140vh;
+        width: 140vw;
+        position: absolute;
+    }
+
+    .tile {
+        border-radius: 1vmax;
+        position: absolute;
+        box-shadow: 8px 8px 8px;
+        transition: transform 800ms ease;
+    
+    }
+    
+    .tile:hover {
+        transform: scale(1.1);
+    }
+    
+    .tile:hover > img { 
+        transform: scale(1.01);
+    }
+    
+    .tile > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transition: opacity 800ms ease,
+        transform 800ms ease;
+        
+    }
+
+    .tile:nth-child(1) {
+        background-color: rgb(255, 238, 88);
+        height: 14%;
+        width: 20%;
+        left: 15%;
+        top: 20%;
+    }
+
+    .tile:nth-child(2) {
+        background-color: rgb(66, 165, 245);
+        height: 24%;
+        width: 14%;
+        left: 42%;
+        top: 22%;
+    }
+    
+    .tile:nth-child(3) {
+        background-color: rgb(239, 83, 80);
+        height: 18%;
+        width: 16%;
+        left: 18%;
+        top: 43%;
+    }
+    
+    .tile:nth-child(4) {
+        background-color: rgb(102, 187, 106);
+        height: 14%;
+        width: 12%;
+        left: 39%;
+        top: 50%;
+    }
+    
+    .tile:nth-child(5) {
+        background-color: rgb(171, 71, 188);
+        height: 16%;
+        width: 32%;
+        left: 8%;
+        top: 70%;
+    }
+    
+    .tile:nth-child(6) {
+        background-color: rgb(255, 167, 38);
+        height: 24%;
+        width: 24%;
+        left: 68%;
+        top: 24%;
+    }
+    
+    .tile:nth-child(7) {
+        background-color: rgb(63, 81, 181);
+        height: 16%;
+        width: 20%;
+        left: 44%;
+        top: 74%;
+    }
+    
+    .tile:nth-child(8) {
+        background-color: rgb(141, 110, 99);
+        height: 24%;
+        width: 18%;
+        left: 72%;
+        top: 56%;
+    }
+    
+    .tile:nth-child(9) {
+        background-color: rgb(250, 250, 250);
+        height: 10%;
+        width: 8%;
+        left: 74%;
+        top: 84%;
+    }
+    .tile:nth-child(10) {
+        background-color: rgb(250, 250, 250);
+        height: 20%;
+        width: 15%;
+        left: 55%;
+        top: 50%;
+    }
+
 }
 
-.tile:nth-child(2) {
-    background-color: rgb(66, 165, 245);
-    height: 24%;
-    width: 14%;
-    left: 42%;
-    top: 22%;
-}
-  
-  .tile:nth-child(3) {
-    background-color: rgb(239, 83, 80);
-    height: 18%;
-    width: 16%;
-    left: 18%;
-    top: 43%;
-}
-  
-  .tile:nth-child(4) {
-    background-color: rgb(102, 187, 106);
-    height: 14%;
-    width: 12%;
-    left: 49%;
-    top: 55%;
-}
-  
-  .tile:nth-child(5) {
-    background-color: rgb(171, 71, 188);
-    height: 16%;
-    width: 32%;
-    left: 8%;
-    top: 70%;
-}
-  
-  .tile:nth-child(6) {
-    background-color: rgb(255, 167, 38);
-    height: 24%;
-    width: 24%;
-    left: 68%;
-    top: 24%;
-}
-  
-  .tile:nth-child(7) {
-    background-color: rgb(63, 81, 181);
-    height: 16%;
-    width: 20%;
-    left: 44%;
-    top: 74%;
-}
-  
-  .tile:nth-child(8) {
-    background-color: rgb(141, 110, 99);
-    height: 24%;
-    width: 18%;
-    left: 72%;
-    top: 56%;
-}
-  
-  .tile:nth-child(9) {
-    background-color: rgb(250, 250, 250);
-    height: 10%;
-    width: 8%;
-    left: 74%;
-    top: 84%;
-}
