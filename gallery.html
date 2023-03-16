@@ -7,82 +7,124 @@
     <link href="https://fonts.cdnfonts.com/css/tazkia" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/shut-down" rel="stylesheet">
     <link rel="stylesheet" href="styleGallery.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     
     <title>Art Portfolio</title>
 </head>
 <body>
 
-    <section class="header">
-        <div class="name">
-            <h1>Dylan Wolling</h1>
-        </div>
-        <div class="navigation">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="store.html">Store</a>
-                </li>
-            </ul>
-        </div>
-    </section>
+<section class="header">
+    <div class="name">
+        <h1>Dylan Wolling</h1>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="store.html">Store</a>
+            </li>
+        </ul>
+    </div>
+</section>
 <section id="gallery">
     <div class="row">
-        <div class="tile">
+        <div class="tile-1 load-hidden">
         <img src="images/1.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-2 load-hidden">
         <img src="images/2.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-3 load-hidden">
         <img src="images/3.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
   </div>
   <div class="row">
-        <div class="tile">
+        <div class="tile-1 load-hidden">
         <img src="images/4.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-2 load-hidden">
         <img src="images/5.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-3 load-hidden">
         <img src="images/6.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
 </div>
 <div class="row">
-        <div class="tile">
+        <div class="tile-1 load-hidden">
         <img src="images/7.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-2 load-hidden">
         <img src="images/8.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-3 load-hidden">
         <img src="images/9.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
 </div>
 <div class="row">
-        <div class="tile">
+        <div class="tile-1 load-hidden">
         <img src="images/10.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-2 load-hidden">
         <img src="images/2.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
-        <div class="tile">
+        <div class="tile-3 load-hidden">
         <img src="images/3.jpg" alt="">
+        <h2>Title goes here</h2>
+        <p>description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ab autem eum quia, placeat repellendus accusamus ducimus maiores aspernatur laborum quibusdam iure.</p>
         </div>
 </div>
 </section>
 
+<script>
+    ScrollReveal().reveal('.tile-1', {delay: 500, easing: 'ease-in'});
+    ScrollReveal().reveal('.tile-2', {delay: 1000, easing: 'ease-in'});
+    ScrollReveal().reveal('.tile-3', {delay: 1500, easing: 'ease-in'});
+</script>
 
 </body>
 </html>

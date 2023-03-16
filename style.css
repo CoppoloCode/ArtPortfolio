@@ -13,7 +13,7 @@ html::-webkit-scrollbar{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background: white;
+    background: rgb(235, 235, 235);
 }
 
 .header{
@@ -25,6 +25,7 @@ body{
     gap: 20px;
     position: fixed;
     z-index: 2;
+    box-shadow: 4px 4px 12px 0px;
 }
 .name h1{
     font-family: 'Tazkia', sans-serif;
