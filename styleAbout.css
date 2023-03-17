@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+html::-webkit-scrollbar{
+    display:none;
+}
+body{
+    font-family: 'Shut Down', sans-serif;
+    background: rgb(235, 235, 235);
+    font-size: 2rem;
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    padding:10px;
+    gap: 20px;
+    position: sticky;
+    z-index: 2;
+    box-shadow: 4px 4px 12px 0px;
+}
+.name h1{
+    font-family: 'Tazkia', sans-serif;
+    font-size: 65px;
+}
+.navigation ul{
+    display:flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.navigation ul li{
+    list-style: none;
+   
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Shut Down', sans-serif;
+    font-size: 2rem;
+}
+
+
+.about{
+    display:flex;
+    margin-top: 5vh;
+}
+
+.info-col{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-left: 7vw;
+    
+}
+.pic-row img{
+    width: 220px;
+}
+.info-row{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 70px;
+}
+.info-row p{
+    text-align: left;
+}
+.contact-info{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-info a{
+    color: black;
+    text-decoration: none;
+    width: 40%;
+}
+.contact-info i{
+    padding-right: 30px;
+}
+.pic-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 30px;
+}
+.pic-col img{
+    max-width: 800px;
+    object-fit: cover;
+    box-shadow: 4px 4px 4px;
+    border-radius: 20px;
+}
+
+@keyframes fade {
+    0%{
+        filter: opacity(0);
+    }
+    50%{
+        filter: opacity(1);
+    }
+    100%{
+        filter: opacity(0);
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .navigation ul li a{
+        font-size: 1.5rem;
+    }
+
+    .about{
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .info-col{
+        width: auto; 
+        margin-left: 0;
+    }
+    .info-row{
+       width: 80vw;
+    }
+    .info-row p{
+        text-align: center;
+    }
+    .contact-info{
+        align-items: center;
+    }
+    .contact-info p{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .contact-info a{
+        width: auto;
+    }
+    .pic-col{
+        width: auto;
+        padding-bottom: 100px;
+       
+    }
+    .pic-col img{
+        max-width: 300px;
+        height: 300px;
+        object-fit: cover;
+        box-shadow: 4px 4px 4px;
+        border-radius: 20px;
+    }
+
+    
+}
