@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+html::-webkit-scrollbar{
+    display:none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: rgb(235, 235, 235);
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    padding:10px;
+    gap: 20px;
+    position: sticky;
+    z-index: 2;
+    box-shadow: 4px 4px 12px 0px;
+}
+.name h1{
+    font-family: 'Tazkia', sans-serif;
+    font-size: 65px;
+}
+.navigation ul{
+    display:flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.navigation ul li{
+    list-style: none;
+   
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Shut Down', sans-serif;
+    font-size: 2rem;
+}
+#shop{
+    padding-top: 5vh;
+    display:flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    gap: 30px;
+    font-family: 'Shut Down', sans-serif;
+    font-size: x-large;
+}
+.product img{
+    width: 70%;
+    height: 60vh;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 4px 4px 4px;
+}
+.product-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-price{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.product-price p{
+    font-family: "Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+    color: #414552;
+    font-size: 30px;
+}
+.product-price button{
+    font-family: "Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+    font-weight: bold;
+    font-size: large;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(59 130 246 / 50%);
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 4px 4px 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    animation: scale .3s ease-in forwards;
+}
+
+@keyframes scale {
+    from{     
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+    .navigation ul li a{
+        font-size: 1.5rem;
+    }
+
+    .product{
+        font-size: large;
+    }
+
+    .product img{
+        height: 30vh;
+    }
+    
+}
