@@ -4,9 +4,9 @@
     box-sizing: border-box;
     
 }
+
 html{
     scroll-behavior: smooth;
-    
 }
 
 html.sr .load-hidden {
@@ -57,7 +57,7 @@ body{
     flex-direction: column;
     gap: 5vh;
 }
-.row{
+#row{
     display: flex;
     align-items: center;
     gap: 5vh;
@@ -135,7 +135,7 @@ body{
     
 }
 
-.row  h2{ 
+#row  h2{ 
     padding-top: 15px;
     padding-left: 15px;
     font-family: 'Tazkia', sans-serif;
@@ -143,7 +143,7 @@ body{
     
 }
 
-.row  p{
+#row  p{
     padding-left: 15px;
     width: 80%;
     font-family: 'Shut Down', sans-serif;
@@ -166,15 +166,15 @@ body{
         font-size: 1.5rem;
     }
 
-    .row{
+    #row{
         flex-direction: column;
         gap: 5vh;
     }
     
-    .row h2{
+    #row h2{
         font-size: 1.5rem;
     }
-    .row p{
+    #row p{
         font-size: 1rem;
     }
     

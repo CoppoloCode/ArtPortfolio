@@ -1,72 +1,73 @@
 const gallery = document.getElementById("gallery");
 
+$.ajax({
+      url: 'getProducts.php',
+      type: 'POST',
+      success: function (data) {
+            console.log('recieved data');
+            createProductElements(JSON.parse(data));
+      },
+      error: function (e){
+            console.log(e.responseText);
+      } 
 
-if(window.screen.width < 1500){
-      document.getElementById('gallery').innerHTML = `<div class="col">
-                                                            <div class="tile">
-                                                            <img src="images/1.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/2.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/3.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/4.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/10.jpg" alt="">
-                                                            </div>
-                                                      </div>
-                                                      <div class="col">
-                                                            <div class="tile">
-                                                            <img src="images/5.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/6.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/7.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/8.jpg" alt="">
-                                                            </div>
-                                                            <div class="tile">
-                                                            <img src="images/9.jpg" alt="">
-                                                            </div>
-                                                      </div>`;
-}else{
-      document.getElementById('gallery').innerHTML = `<div class="tile">
-                                                            <img src="images/1.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/2.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/3.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/4.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/5.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/6.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/7.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/8.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/9.jpg" alt="">
-                                                      </div>
-                                                      <div class="tile">
-                                                            <img src="images/10.jpg" alt="">
-                                                      </div>`;
+})
+
+function shuffle(array) {
+      let currentIndex = array.length,  randomIndex;
+      
+      while (currentIndex != 0) {
+    
+        
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+    
+      return array;
+}
+
+
+function createProductElements(products){
+
+      let shuffledProducts = shuffle(products); 
+
+      if(window.screen.width >= 1500){
+            
+            document.getElementById('gallery').innerHTML = `<div id="col"></div>`;
+            for(i = 0; i < 5; i++){
+                  
+                  document.getElementById('col').innerHTML += `<div class="tile">
+                                                                  <img src="images/`+shuffledProducts[i][1]+`" alt="">
+                                                            </div>`;
+
+            }
+
+            document.getElementById('gallery').innerHTML += `<div id="col-2"></div>`;
+            for(i = 5; i < 10; i++){
+                  document.getElementById('col-2').innerHTML += `<div class="tile">
+                                                                  <img src="images/`+shuffledProducts[i][1]+`" alt="">
+                                                            </div>`;
+
+            }
+      }else{
+            document.getElementById('gallery').innerHTML = ``;
+            for(i = 0; i < 10; i++){
+                  document.getElementById('gallery').innerHTML += `<div class="tile">
+                                                                  <img src="images/`+shuffledProducts[i][1]+`" alt="">
+                                                            </div>`;
+            }
+            
+                                                      
+
+      }
+      
+}
+
+
+
+
 
 
 
@@ -92,4 +93,4 @@ if(window.screen.width < 1500){
                   }
             )
       }
-}
+

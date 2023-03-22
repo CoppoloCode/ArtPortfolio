@@ -97,6 +97,7 @@ body{
 }
 .pic-col img{
     max-width: 800px;
+    max-height: 80%;
     object-fit: cover;
     box-shadow: 4px 4px 4px;
     border-radius: 20px;
