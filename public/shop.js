@@ -54,7 +54,7 @@ function displayProducts(products){
     for(i = 0; i < products.length; i++){
         let p = products[i];
         document.getElementById('shop').innerHTML += `<div class="product">
-                                                            <img src="images/`+p.name+`.jpg" alt="">
+                                                            <img src="images/`+p.name+`" alt="">
                                                             <div class="product-wrapper">
                                                                 <div class="product-info">
                                                                     <h2>`+p.name+`</h2>

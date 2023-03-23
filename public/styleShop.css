@@ -62,24 +62,26 @@ body{
 
 .product{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 70%;
+    align-items: center;
     gap: 30px;
     font-family: 'Shut Down', sans-serif;
     font-size: x-large;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 .product img{
-    width: 70%;
-    height: 60vh;
+    
     border-radius: 20px;
     border-style: none;
     box-shadow: 4px 4px 4px;
+    object-fit: scale-down;
 }
 .product-wrapper{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 30%;
+    width: 50%;
 }
 .product-info{
     display: flex;
@@ -98,7 +100,7 @@ body{
     font-size: 30px;
 }
 .product-price button{
-    font-family: "Segoe UI","Roboto","Helvetica Neue","Ubuntu",sans-serif;
+    font-family: 'Shut Down', sans-serif;
     font-weight: bold;
     font-size: large;
     width: 100px;
@@ -136,6 +138,14 @@ button:hover{
 
     .product img{
         height: 30vh;
+    }
+
+    .product-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+        text-align: center;
     }
     
 }

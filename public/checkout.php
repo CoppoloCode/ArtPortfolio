@@ -29,6 +29,7 @@ $checkout_session = \Stripe\Checkout\Session::create([
     ],  
     'quantity' => 1,
   ]],
+  'shipping_address_collection' => ['allowed_countries' => ['US']],
   'mode' => 'payment',
   'success_url' => $YOUR_DOMAIN . '/success.html',
   'cancel_url' =>  $YOUR_DOMAIN . '/cancel.html',
