@@ -3,7 +3,7 @@
 require_once 'configdb.php';
 
 
-$stmt = $conn->prepare("SELECT * FROM products");
+$stmt = $conn->prepare("SELECT * FROM shop");
 
 $stmt->execute();
 $result = $stmt->get_result();
@@ -18,7 +18,7 @@ while($row = $result->fetch_assoc()){
     $products[$i][3] = $row['price']; 
     $products[$i][4] = $row['quantity'];
     $products[$i][5] = $row['group_id'];
-    
+    $products[$i][6] = $row['dimensions'];
     $i++;
 }
 

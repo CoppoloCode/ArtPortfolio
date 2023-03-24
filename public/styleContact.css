@@ -131,9 +131,11 @@ body{
     font-weight: bold;
     font-size: 2rem;
     font-family: 'Shut Down', sans-serif;
+    filter: opacity(.8);
 }
 .form-section button:hover{
     cursor: pointer;
+    filter: opacity(1);
 }
 
 

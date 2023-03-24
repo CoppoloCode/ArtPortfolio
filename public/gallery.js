@@ -65,9 +65,9 @@ function createProductElements(products){
         }
     }
     
-    ScrollReveal().reveal('.tile-1', {delay: 500, easing: 'ease-in'});
-    ScrollReveal().reveal('.tile-2', {delay: 1000, easing: 'ease-in'});
-    ScrollReveal().reveal('.tile-3', {delay: 1500, easing: 'ease-in'});
+    ScrollReveal().reveal('.tile-1', {delay: 200, easing: 'ease-in'});
+    ScrollReveal().reveal('.tile-2', {delay: 500, easing: 'ease-in'});
+    ScrollReveal().reveal('.tile-3', {delay: 800, easing: 'ease-in'});
     
 
         
