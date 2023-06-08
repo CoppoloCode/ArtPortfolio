@@ -92,13 +92,15 @@ function createProducts(data){
 
 function displayProducts(products){
 
+    
     for(i = 0; i < products.length; i++){
         let p = products[i];
+       
         document.getElementById('shop').innerHTML += `<div class="product">
                                                             <img src="images/`+p.name+`">
                                                             <div class="product-wrapper">
                                                                 <div class="product-info">
-                                                                    <h2>`+p.name+`</h2>
+                                                                    <h2> Art Piece </h2>
                                                                     <p>`+p.description+`</p>
                                                                 </div>
                                                                 <div class="product-price">
@@ -118,8 +120,9 @@ function displayGroupedProducts(productGroups){
 
     document.getElementById('shop').innerHTML = ``;
 
+   
     for(i = 0; i < productGroups.length; i++){
-
+       
         document.getElementById('shop').innerHTML += `<div class="product"><div id="`+(i+1)+`" class="img-wrapper"></div></div>`
         
         let p = productGroups[i][0];
@@ -128,7 +131,7 @@ function displayGroupedProducts(productGroups){
         document.getElementsByClassName('product')[document.getElementsByClassName('product').length-1].innerHTML += `<button onclick="changeImg(`+(i+1)+`)"><i class="fa-solid fa-arrows-spin"></i></button>
                                                                                                                         <div class="product-wrapper">
                                                                                                                             <div class="product-info">
-                                                                                                                                <h2>`+p.name+`</h2>
+                                                                                                                                <h2>Art Piece </h2>
                                                                                                                                 <p>`+p.description+`</p>
                                                                                                                             </div>
                                                                                                                             <div class="product-price">

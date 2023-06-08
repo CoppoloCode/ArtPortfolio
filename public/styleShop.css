@@ -71,6 +71,7 @@ body{
     padding-bottom: 3vh;
     width: 80%;
     height: auto;
+    gap: 20px;
 }
 .img-wrapper{
     display: flex;
@@ -103,7 +104,10 @@ body{
 .product-wrapper{
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    box-shadow: 4px 4px 12px 1px;
+    border-color: black;
+    border-radius: 20px;
+    padding: 20px;
     width: 50%;
     height: 20%;
 }
